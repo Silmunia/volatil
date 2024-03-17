@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/SlowestClockTick.wav-2391e4003c45ad7e928b1cb48e8b03c9.sample"
+
+[deps]
+
+source_file="res://assets/sound/sfx/SlowestClockTick.wav"
+dest_files=[ "res://.import/SlowestClockTick.wav-2391e4003c45ad7e928b1cb48e8b03c9.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

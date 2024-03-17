@@ -1,0 +1,86 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://scripts/HUD/HUD.gd" type="Script" id=1]
+[ext_resource path="res://assets/sound/sfx/SlowestClockTick.wav" type="AudioStream" id=2]
+[ext_resource path="res://assets/sound/sfx/SlowClockTick.wav" type="AudioStream" id=3]
+[ext_resource path="res://assets/sound/sfx/FastClockTick.wav" type="AudioStream" id=4]
+[ext_resource path="res://assets/sound/sfx/FastestClockTick.wav" type="AudioStream" id=5]
+[ext_resource path="res://assets/sound/sfx/ClockAlarm.wav" type="AudioStream" id=6]
+[ext_resource path="res://scenes/HUD/PlayerInfo.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/HUD/Messages.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/HUD/ResidueInfo.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/HUD/GearInfo.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/HUD/StageProgress.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/HUD/PauseMenu.tscn" type="PackedScene" id=12]
+
+[node name="HUD" type="Control"]
+
+pause_mode = 2
+light_mask = 8
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Pause", "Visibility" ]
+slowestClock = ExtResource( 2 )
+slowClock = ExtResource( 3 )
+fastClock = ExtResource( 4 )
+fastestClock = ExtResource( 5 )
+alarmClock = ExtResource( 6 )
+
+[node name="CanvasLayer" type="Node2D" parent="." index="0"]
+
+light_mask = 8
+z_index = 2
+_sections_unfolded = [ "Visibility", "Z Index" ]
+
+[node name="PlayerInfo" parent="CanvasLayer" index="0" instance=ExtResource( 7 )]
+
+margin_left = 14.0
+margin_top = 19.0
+margin_right = 251.0
+margin_bottom = 144.0
+
+[node name="Messages" parent="CanvasLayer" index="1" instance=ExtResource( 8 )]
+
+margin_left = 325.0
+margin_top = 9.0
+margin_right = 940.0
+margin_bottom = 159.0
+
+[node name="ResidueInfo" parent="CanvasLayer" index="2" instance=ExtResource( 9 )]
+
+margin_left = 1000.0
+margin_top = 17.0
+margin_right = 1336.0
+margin_bottom = 135.0
+
+[node name="GearInfo" parent="CanvasLayer" index="3" instance=ExtResource( 10 )]
+
+margin_left = 50.0
+margin_top = 159.0
+margin_right = 114.0
+margin_bottom = 357.0
+
+[node name="StageProgress" parent="CanvasLayer" index="4" instance=ExtResource( 11 )]
+
+margin_left = 24.0
+margin_top = 359.0
+margin_right = 120.0
+margin_bottom = 716.0
+
+[node name="PauseMenu" parent="CanvasLayer" index="5" instance=ExtResource( 12 )]
+
+visible = false
+light_mask = 8
+
+

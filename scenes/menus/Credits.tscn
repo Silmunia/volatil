@@ -1,0 +1,601 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://scripts/menus/Credits.gd" type="Script" id=1]
+[ext_resource path="res://assets/sound/sfx/ChooseMenu.wav" type="AudioStream" id=2]
+[ext_resource path="res://assets/sound/sfx/SelectMenu.wav" type="AudioStream" id=3]
+[ext_resource path="res://assets/graphics/menus/credits/Creditos2.png" type="Texture" id=4]
+[ext_resource path="res://assets/fonts/Apparitions.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://assets/graphics/menus/credits/Equipe.png" type="Texture" id=6]
+[ext_resource path="res://assets/graphics/interface/labels/ShortLabel.png" type="Texture" id=7]
+[ext_resource path="res://assets/graphics/interface/labelSelectors/Select.png" type="Texture" id=8]
+[ext_resource path="res://assets/graphics/interface/labelSelectors/Hover.png" type="Texture" id=9]
+[ext_resource path="res://assets/graphics/interface/labelSelectors/arrow-point-to-right0.png" type="Texture" id=10]
+[ext_resource path="res://assets/animations/FadeIn.tres" type="Animation" id=11]
+[ext_resource path="res://assets/animations/FadeOut.tres" type="Animation" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 120
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 5 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="Theme" id=2]
+
+default_font = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+
+size = 80
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 5 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="Theme" id=4]
+
+default_font = SubResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+
+size = 60
+use_mipmaps = false
+use_filter = false
+extra_spacing_bottom = -5
+font_data = ExtResource( 5 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+
+[sub_resource type="Theme" id=6]
+
+default_font = SubResource( 5 )
+
+[sub_resource type="DynamicFont" id=7]
+
+size = 60
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 5 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="Theme" id=8]
+
+default_font = SubResource( 7 )
+
+[sub_resource type="SpriteFrames" id=9]
+
+animations = [ {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "Select",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "None",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "Hover",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=10]
+
+resource_name = "ArrowLoop"
+length = 0.5
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("ArrowRight:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 810, 659 ), Vector2( 820, 659 ), Vector2( 810, 659 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ArrowLeft:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 447, 659 ), Vector2( 437, 659 ), Vector2( 447, 659 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Credits:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -1400, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Return:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Cursor:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Arrows/ArrowRight:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Arrows/ArrowLeft:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=12]
+
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Credits:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1400, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Cursor:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Return:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Arrows/ArrowRight:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Arrows/ArrowLeft:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[node name="Credits" type="Node"]
+
+script = ExtResource( 1 )
+hoverMenu = ExtResource( 2 )
+selectMenu = ExtResource( 3 )
+
+[node name="Background" type="TextureRect" parent="." index="0"]
+
+modulate = Color( 0.550781, 0.550781, 0.550781, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1368.0
+margin_bottom = 769.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 5
+_sections_unfolded = [ "Visibility" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Title" type="Label" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 551.0
+margin_top = 24.0
+margin_right = 805.0
+margin_bottom = 150.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = SubResource( 2 )
+text = "Créditos"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme" ]
+
+[node name="Credits" type="Node2D" parent="." index="2"]
+
+editor/display_folded = true
+_sections_unfolded = [ "Transform" ]
+
+[node name="Team" type="TextureRect" parent="Credits" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 74.0
+margin_top = 162.0
+margin_right = 1284.0
+margin_bottom = 631.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 6 )
+stretch_mode = 0
+
+[node name="Others" type="Node2D" parent="Credits" index="1"]
+
+editor/display_folded = true
+position = Vector2( 1391.49, 0 )
+
+[node name="TitleSup" type="Label" parent="Credits/Others" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 316.0
+margin_top = 105.0
+margin_right = 437.0
+margin_bottom = 189.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = SubResource( 4 )
+text = "Apoio"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme" ]
+
+[node name="DescSup" type="Label" parent="Credits/Others" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 103.0
+margin_top = 199.0
+margin_right = 655.0
+margin_bottom = 630.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = SubResource( 6 )
+text = "Alysson Diniz dos Santos
+Geovany Rocha Torres
+José Aires de Castro Filho
+Juliana Monteiro da Silva
+Maria de Fátima Costa de Souza
+Mateus Pinheiro de Góes Carneiro
+Raquel Santiago Freire"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme" ]
+
+[node name="TitleSound" type="Label" parent="Credits/Others" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 919.0
+margin_top = 115.0
+margin_right = 1221.0
+margin_bottom = 547.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = SubResource( 4 )
+text = "Sons e Música
+
+
+
+(CC BY 4.0)"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme" ]
+
+[node name="DescSound" type="Label" parent="Credits/Others" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 784.0
+margin_top = 203.0
+margin_right = 1336.0
+margin_bottom = 386.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = SubResource( 6 )
+text = "Alexandr Zhelanov
+HorrorPen
+Nicole Marie T
+OpenGameArt.org"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme" ]
+
+[node name="Return" type="TextureRect" parent="." index="3"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 546.0
+margin_top = 653.0
+margin_right = 806.0
+margin_bottom = 753.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 7 )
+stretch_mode = 0
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Label" type="Label" parent="Return" index="0"]
+
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 73.0
+margin_top = 20.0
+margin_right = 182.0
+margin_bottom = 84.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = SubResource( 8 )
+text = "Voltar"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme", "Visibility" ]
+
+[node name="Cursor" type="AnimatedSprite" parent="." index="4"]
+
+position = Vector2( 673.276, 705.083 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 9 )
+animation = "Hover"
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Arrows" type="Node2D" parent="." index="5"]
+
+editor/display_folded = true
+_sections_unfolded = [ "Visibility" ]
+
+[node name="ArrowRight" type="TextureRect" parent="Arrows" index="0"]
+
+modulate = Color( 0.871094, 0.871094, 0.871094, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 810.0
+margin_top = 659.0
+margin_right = 902.0
+margin_bottom = 751.0
+rect_pivot_offset = Vector2( 46, 46 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 10 )
+expand = true
+stretch_mode = 0
+_sections_unfolded = [ "Rect", "Visibility" ]
+
+[node name="ArrowLeft" type="TextureRect" parent="Arrows" index="1"]
+
+visible = false
+modulate = Color( 0.871094, 0.871094, 0.871094, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 447.0
+margin_top = 659.0
+margin_right = 539.0
+margin_bottom = 751.0
+rect_rotation = 180.0
+rect_pivot_offset = Vector2( 46, 46 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 10 )
+expand = true
+stretch_mode = 0
+_sections_unfolded = [ "Rect", "Visibility" ]
+
+[node name="ArrowAnimation" type="AnimationPlayer" parent="Arrows" index="2"]
+
+root_node = NodePath("..")
+autoplay = "ArrowLoop"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/ArrowLoop = SubResource( 10 )
+blend_times = [  ]
+
+[node name="Fade" type="ColorRect" parent="." index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1376.0
+margin_bottom = 777.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="FadeAnimation" type="AnimationPlayer" parent="." index="7"]
+
+root_node = NodePath("..")
+autoplay = "FadeIn"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/FadeIn = ExtResource( 11 )
+anims/FadeOut = ExtResource( 12 )
+blend_times = [  ]
+
+[node name="CreditsAnimation" type="AnimationPlayer" parent="." index="8"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Position0To1 = SubResource( 11 )
+anims/Position1To0 = SubResource( 12 )
+blend_times = [  ]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="9"]
+
+stream = null
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "SFX"
+
+

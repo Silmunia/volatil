@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Zombies Play.ogg-3845dee903780af560e9a483bddf8f87.oggstr"
+
+[deps]
+
+source_file="res://assets/sound/music/Zombies Play.ogg"
+dest_files=[ "res://.import/Zombies Play.ogg-3845dee903780af560e9a483bddf8f87.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

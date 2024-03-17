@@ -1,0 +1,587 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://scripts/intro/Cutscene.gd" type="Script" id=1]
+[ext_resource path="res://assets/sound/sfx/ChooseMenu.wav" type="AudioStream" id=2]
+[ext_resource path="res://assets/sound/sfx/SelectMenu.wav" type="AudioStream" id=3]
+[ext_resource path="res://assets/graphics/intro/cutscene/Cutscene01.png" type="Texture" id=4]
+[ext_resource path="res://assets/graphics/intro/cutscene/Cutscene02.png" type="Texture" id=5]
+[ext_resource path="res://assets/graphics/intro/cutscene/Cutscene03.png" type="Texture" id=6]
+[ext_resource path="res://assets/graphics/intro/cutscene/Cutscene04.png" type="Texture" id=7]
+[ext_resource path="res://assets/graphics/interface/labels/ButtonLabel.png" type="Texture" id=8]
+[ext_resource path="res://assets/fonts/Apparitions.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://assets/graphics/interface/labelSelectors/arrow-point-to-right0.png" type="Texture" id=10]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "FadeIn"
+length = 0.2
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Fade:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "FadeOut"
+length = 0.2
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Fade:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+
+length = 0.4
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Scenes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 70.5, 0 ), Vector2( -1408, 0 ), Vector2( -1228, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+
+length = 0.4
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Scenes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1228, 0 ), Vector2( 250.5, 0 ), Vector2( 70.5, 0 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+
+length = 0.4
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Scenes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1228, 0 ), Vector2( -2730, 0 ), Vector2( -2550, 0 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+
+length = 0.4
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Scenes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -2550, 0 ), Vector2( -1048, 0 ), Vector2( -1228, 0 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+
+length = 0.4
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Scenes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -2550, 0 ), Vector2( -4075, 0 ), Vector2( -3895, 0 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+
+length = 0.4
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Scenes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -3895, 0 ), Vector2( -2370, 0 ), Vector2( -2550, 0 ) ]
+}
+
+[sub_resource type="DynamicFont" id=9]
+
+size = 50
+use_mipmaps = false
+use_filter = true
+extra_spacing_bottom = -25
+font_data = ExtResource( 9 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+
+[sub_resource type="Theme" id=10]
+
+default_font = SubResource( 9 )
+
+[sub_resource type="DynamicFont" id=11]
+
+size = 64
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 9 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="Theme" id=12]
+
+default_font = SubResource( 11 )
+
+[node name="Cutscene" type="Node"]
+
+script = ExtResource( 1 )
+hoverMenu = ExtResource( 2 )
+selectMenu = ExtResource( 3 )
+
+[node name="Background" type="ColorRect" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1376.0
+margin_bottom = 779.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Scenes" type="Node2D" parent="." index="1"]
+
+editor/display_folded = true
+position = Vector2( 70.5, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Cutscene01" type="TextureRect" parent="Scenes" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -27.0
+margin_top = -1.0
+margin_right = 1253.0
+margin_bottom = 719.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 4 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Cutscene02" type="TextureRect" parent="Scenes" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1269.0
+margin_top = -1.0
+margin_right = 2549.0
+margin_bottom = 719.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 5 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Cutscene03" type="TextureRect" parent="Scenes" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 2603.0
+margin_top = -1.0
+margin_right = 3883.0
+margin_bottom = 719.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 6 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Cutscene04" type="TextureRect" parent="Scenes" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 3937.0
+margin_top = -1.0
+margin_right = 5217.0
+margin_bottom = 719.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 7 )
+stretch_mode = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
+
+root_node = NodePath("..")
+autoplay = "FadeIn"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/FadeIn = SubResource( 1 )
+anims/FadeOut = SubResource( 2 )
+anims/Position1To2 = SubResource( 3 )
+anims/Position2To1 = SubResource( 4 )
+anims/Position2To3 = SubResource( 5 )
+anims/Position3To2 = SubResource( 6 )
+anims/Position3To4 = SubResource( 7 )
+anims/Position4To3 = SubResource( 8 )
+blend_times = [  ]
+
+[node name="PrevScene" type="Control" parent="." index="3"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 62.0
+margin_top = 652.0
+margin_right = 275.0
+margin_bottom = 752.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="Texture" type="NinePatchRect" parent="PrevScene" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -9.0
+margin_right = 1319.0
+margin_bottom = 666.0
+rect_scale = Vector2( 0.15, 0.15 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 8 )
+patch_margin_left = 115
+patch_margin_right = 115
+_sections_unfolded = [ "Patch Margin", "Rect" ]
+
+[node name="Label" type="Label" parent="PrevScene" index="1"]
+
+self_modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 49.0
+margin_top = -2.0
+margin_right = 164.0
+margin_bottom = 85.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = SubResource( 10 )
+text = "quadro anterior"
+align = 2
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme" ]
+
+[node name="TextureRect" type="TextureRect" parent="PrevScene" index="2"]
+
+modulate = Color( 0.0507813, 0.0507813, 0.0507813, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -7.0
+margin_top = 4.0
+margin_right = 53.0
+margin_bottom = 64.0
+rect_rotation = 180.0
+rect_pivot_offset = Vector2( 32, 32 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 10 )
+expand = true
+stretch_mode = 0
+_sections_unfolded = [ "Rect", "Visibility" ]
+
+[node name="NextScene" type="Control" parent="." index="4"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1126.0
+margin_top = 652.0
+margin_right = 1339.0
+margin_bottom = 752.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="Texture" type="NinePatchRect" parent="NextScene" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -9.0
+margin_right = 1319.0
+margin_bottom = 666.0
+rect_scale = Vector2( 0.15, 0.15 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 8 )
+patch_margin_left = 115
+patch_margin_right = 115
+_sections_unfolded = [ "Patch Margin", "Rect" ]
+
+[node name="Label" type="Label" parent="NextScene" index="1"]
+
+self_modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 17.0
+margin_top = -2.0
+margin_right = 129.0
+margin_bottom = 85.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = SubResource( 10 )
+text = "quadro seguinte"
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme" ]
+
+[node name="TextureRect" type="TextureRect" parent="NextScene" index="2"]
+
+modulate = Color( 0.0507813, 0.0507813, 0.0507813, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 123.0
+margin_top = 9.0
+margin_right = 183.0
+margin_bottom = 69.0
+rect_pivot_offset = Vector2( 32, 32 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 10 )
+expand = true
+stretch_mode = 0
+_sections_unfolded = [ "Rect", "Visibility" ]
+
+[node name="EndScene" type="Control" parent="." index="5"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="Texture" type="NinePatchRect" parent="EndScene" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 317.0
+margin_top = 652.0
+margin_right = 5075.0
+margin_bottom = 1318.0
+rect_scale = Vector2( 0.15, 0.15 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 8 )
+patch_margin_left = 115
+patch_margin_right = 115
+_sections_unfolded = [ "Patch Margin", "Rect" ]
+
+[node name="Label" type="Label" parent="EndScene" index="1"]
+
+self_modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 365.0
+margin_top = 655.0
+margin_right = 988.0
+margin_bottom = 722.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = SubResource( 12 )
+text = "aperte espaço para encerrar história"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme", "Visibility" ]
+
+[node name="Fade" type="ColorRect" parent="." index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1376.0
+margin_bottom = 779.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0, 0, 0, 1 )
+_sections_unfolded = [ "Visibility" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="7"]
+
+stream = null
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "SFX"
+
+

@@ -1,0 +1,150 @@
+[gd_scene load_steps=41 format=2]
+
+[ext_resource path="res://scripts/equipment/Storage.gd" type="Script" id=1]
+[ext_resource path="res://assets/graphics/sprites/equipment/store/ArmazemIdle.png" type="Texture" id=2]
+[ext_resource path="res://assets/graphics/sprites/equipment/store/ArmazemNovo/Armazem (1).png" type="Texture" id=3]
+[ext_resource path="res://assets/graphics/sprites/equipment/store/ArmazemNovo/Armazem (2).png" type="Texture" id=4]
+[ext_resource path="res://assets/graphics/sprites/equipment/store/ArmazemNovo/Armazem (3).png" type="Texture" id=5]
+[ext_resource path="res://assets/graphics/sprites/equipment/store/ArmazemNovo/Armazem (4).png" type="Texture" id=6]
+[ext_resource path="res://assets/graphics/sprites/equipment/store/ArmazemNovo/Armazem (5).png" type="Texture" id=7]
+[ext_resource path="res://assets/graphics/sprites/equipment/store/ArmazemNovo/Armazem (6).png" type="Texture" id=8]
+[ext_resource path="res://assets/graphics/sprites/equipment/store/ArmazemNovo/Armazem (7).png" type="Texture" id=9]
+[ext_resource path="res://assets/graphics/sprites/equipment/store/ArmazemNovo/Armazem (8).png" type="Texture" id=10]
+[ext_resource path="res://assets/graphics/sprites/equipment/store/ArmazemNovo/Armazem (9).png" type="Texture" id=11]
+[ext_resource path="res://assets/graphics/sprites/equipment/store/ArmazemNovo/Armazem (10).png" type="Texture" id=12]
+[ext_resource path="res://assets/graphics/sprites/equipment/store/ArmazemNovo/Armazem (11).png" type="Texture" id=13]
+[ext_resource path="res://assets/graphics/sprites/equipment/store/ArmazemNovo/Armazem (12).png" type="Texture" id=14]
+[ext_resource path="res://assets/graphics/sprites/equipment/store/ArmazemNovo/Armazem (13).png" type="Texture" id=15]
+[ext_resource path="res://assets/graphics/sprites/equipment/store/ArmazemNovo/Armazem (14).png" type="Texture" id=16]
+[ext_resource path="res://assets/graphics/sprites/equipment/store/ArmazemNovo/Armazem (15).png" type="Texture" id=17]
+[ext_resource path="res://assets/graphics/sprites/equipment/store/ArmazemNovo/Armazem (16).png" type="Texture" id=18]
+[ext_resource path="res://assets/graphics/sprites/equipment/store/ArmazemNovo/Armazem (17).png" type="Texture" id=19]
+[ext_resource path="res://assets/graphics/sprites/equipment/store/ArmazemNovo/Armazem (18).png" type="Texture" id=20]
+[ext_resource path="res://assets/graphics/sprites/equipment/store/ArmazemNovo/Armazem (19).png" type="Texture" id=21]
+[ext_resource path="res://assets/graphics/sprites/equipment/store/ArmazemNovo/Armazem (20).png" type="Texture" id=22]
+[ext_resource path="res://assets/graphics/sprites/equipment/store/ArmazemNovo/Armazem (21).png" type="Texture" id=23]
+[ext_resource path="res://assets/graphics/sprites/equipment/store/ArmazemNovo/Armazem (22).png" type="Texture" id=24]
+[ext_resource path="res://assets/graphics/sprites/equipment/store/ArmazemNovo/Armazem (23).png" type="Texture" id=25]
+[ext_resource path="res://assets/graphics/sprites/equipment/store/ArmazemNovo/Armazem (24).png" type="Texture" id=26]
+[ext_resource path="res://assets/graphics/sprites/equipment/store/ArmazemNovo/Armazem (25).png" type="Texture" id=27]
+[ext_resource path="res://assets/graphics/sprites/equipment/store/ArmazemNovo/Armazem (26).png" type="Texture" id=28]
+[ext_resource path="res://assets/graphics/sprites/equipment/store/ArmazemNovo/Armazem (27).png" type="Texture" id=29]
+[ext_resource path="res://assets/graphics/sprites/equipment/store/ArmazemNovo/Armazem (28).png" type="Texture" id=30]
+[ext_resource path="res://assets/graphics/sprites/equipment/store/ArmazemNovo/Armazem (29).png" type="Texture" id=31]
+[ext_resource path="res://assets/graphics/sprites/equipment/store/ArmazemNovo/Armazem (30).png" type="Texture" id=32]
+[ext_resource path="res://assets/graphics/sprites/equipment/store/ArmazemNovo/Armazem (31).png" type="Texture" id=33]
+[ext_resource path="res://assets/graphics/sprites/equipment/store/ArmazemNovo/Armazem (32).png" type="Texture" id=34]
+[ext_resource path="res://assets/graphics/sprites/vfx/light.png" type="Texture" id=35]
+[ext_resource path="res://assets/animations/BlinkLights.tres" type="Animation" id=36]
+[ext_resource path="res://assets/animations/OffLights.tres" type="Animation" id=37]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "Done",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ) ],
+"loop": false,
+"name": "Active",
+"speed": 15.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 30.4886, 30.157 )
+
+[sub_resource type="OccluderPolygon2D" id=3]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -32, -32, -32, -96, 32, -96, 32, -32 )
+
+[node name="Storage" type="StaticBody2D" index="0" groups=[
+"Storage",
+"Equipment",
+]]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Transform", "Visibility" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
+
+position = Vector2( 0, -95 )
+scale = Vector2( 0.258, 0.258 )
+frames = SubResource( 1 )
+animation = "Active"
+frame = 31
+playing = true
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+visible = false
+position = Vector2( 0, -62.5 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Light2D" type="Light2D" parent="." index="2"]
+
+position = Vector2( 0, -47.2033 )
+scale = Vector2( 1, 0.501645 )
+enabled = false
+editor_only = false
+texture = ExtResource( 35 )
+offset = Vector2( 0, 0 )
+texture_scale = 0.26
+color = Color( 1, 1, 1, 1 )
+energy = 1.0
+mode = 0
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+_sections_unfolded = [ "Range", "Shadow", "Visibility" ]
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." index="3"]
+
+occluder = SubResource( 3 )
+light_mask = 1
+_sections_unfolded = [ "Visibility" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="4"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/BlinkLights = ExtResource( 36 )
+anims/OffLights = ExtResource( 37 )
+blend_times = [  ]
+
+

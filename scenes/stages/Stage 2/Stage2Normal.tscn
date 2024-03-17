@@ -1,0 +1,323 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://scripts/stages/Stage 2/Stage2Normal.gd" type="Script" id=1]
+[ext_resource path="res://scenes/vfx/LabMap.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/equipment/Desk.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/mainCharacter/mainCharacter.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/equipment/Spawner.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/equipment/Storage.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/equipment/Balance.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/equipment/Filter.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/equipment/Checker.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/equipment/EPI/CoatStore.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/equipment/EPI/GloveStore.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/equipment/EPI/MaskStore.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/HUD/HUD.tscn" type="PackedScene" id=13]
+[ext_resource path="res://assets/animations/FadeInLoad.tres" type="Animation" id=14]
+[ext_resource path="res://scenes/menus/Loading.tscn" type="PackedScene" id=15]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "FadeOut"
+length = 0.2
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Fade:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Stage2Normal" type="Node"]
+
+pause_mode = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Pause" ]
+
+[node name="LabMap" parent="." index="0" instance=ExtResource( 2 )]
+
+[node name="YSort" type="YSort" parent="." index="1"]
+
+editor/display_folded = true
+position = Vector2( 30, 20 )
+sort_enabled = true
+_sections_unfolded = [ "Sort", "Transform" ]
+
+[node name="Desk2" parent="YSort" index="0" instance=ExtResource( 3 )]
+
+position = Vector2( 129, 205 )
+
+[node name="Desk6" parent="YSort" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 385, 205 )
+
+[node name="Desk7" parent="YSort" index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 513, 205 )
+
+[node name="Desk8" parent="YSort" index="3" instance=ExtResource( 3 )]
+
+position = Vector2( 641, 205 )
+
+[node name="Desk9" parent="YSort" index="4" instance=ExtResource( 3 )]
+
+position = Vector2( 769, 205 )
+
+[node name="Desk10" parent="YSort" index="5" instance=ExtResource( 3 )]
+
+position = Vector2( 897, 205 )
+
+[node name="Desk11" parent="YSort" index="6" instance=ExtResource( 3 )]
+
+position = Vector2( 961, 205 )
+
+[node name="Desk12" parent="YSort" index="7" instance=ExtResource( 3 )]
+
+position = Vector2( 321, 205 )
+
+[node name="Desk13" parent="YSort" index="8" instance=ExtResource( 3 )]
+
+position = Vector2( 257, 205 )
+
+[node name="Desk14" parent="YSort" index="9" instance=ExtResource( 3 )]
+
+position = Vector2( 193, 205 )
+
+[node name="Desk15" parent="YSort" index="10" instance=ExtResource( 3 )]
+
+position = Vector2( 1217, 205 )
+
+[node name="Desk17" parent="YSort" index="11" instance=ExtResource( 3 )]
+
+position = Vector2( 1217, 269 )
+
+[node name="Desk18" parent="YSort" index="12" instance=ExtResource( 3 )]
+
+position = Vector2( 1217, 333 )
+
+[node name="Desk20" parent="YSort" index="13" instance=ExtResource( 3 )]
+
+position = Vector2( 1217, 461 )
+
+[node name="Desk23" parent="YSort" index="14" instance=ExtResource( 3 )]
+
+position = Vector2( 1217, 589 )
+
+[node name="Desk24" parent="YSort" index="15" instance=ExtResource( 3 )]
+
+position = Vector2( 1217, 653 )
+
+[node name="Desk26" parent="YSort" index="16" instance=ExtResource( 3 )]
+
+position = Vector2( 1217, 717 )
+
+[node name="Desk27" parent="YSort" index="17" instance=ExtResource( 3 )]
+
+position = Vector2( 1153, 717 )
+
+[node name="Desk28" parent="YSort" index="18" instance=ExtResource( 3 )]
+
+position = Vector2( 1089, 717 )
+
+[node name="Desk29" parent="YSort" index="19" instance=ExtResource( 3 )]
+
+position = Vector2( 1025, 717 )
+
+[node name="Desk30" parent="YSort" index="20" instance=ExtResource( 3 )]
+
+position = Vector2( 961, 717 )
+
+[node name="Desk31" parent="YSort" index="21" instance=ExtResource( 3 )]
+
+position = Vector2( 897, 717 )
+
+[node name="Desk32" parent="YSort" index="22" instance=ExtResource( 3 )]
+
+position = Vector2( 321, 717 )
+
+[node name="Desk33" parent="YSort" index="23" instance=ExtResource( 3 )]
+
+position = Vector2( 769, 717 )
+
+[node name="Desk34" parent="YSort" index="24" instance=ExtResource( 3 )]
+
+position = Vector2( 193, 717 )
+
+[node name="Desk35" parent="YSort" index="25" instance=ExtResource( 3 )]
+
+position = Vector2( 641, 717 )
+
+[node name="Desk36" parent="YSort" index="26" instance=ExtResource( 3 )]
+
+position = Vector2( 513, 717 )
+
+[node name="Desk37" parent="YSort" index="27" instance=ExtResource( 3 )]
+
+position = Vector2( 385, 717 )
+
+[node name="Desk38" parent="YSort" index="28" instance=ExtResource( 3 )]
+
+position = Vector2( 257, 717 )
+
+[node name="Desk39" parent="YSort" index="29" instance=ExtResource( 3 )]
+
+position = Vector2( 129, 717 )
+
+[node name="Desk41" parent="YSort" index="30" instance=ExtResource( 3 )]
+
+position = Vector2( 129, 653 )
+
+[node name="Desk42" parent="YSort" index="31" instance=ExtResource( 3 )]
+
+position = Vector2( 129, 589 )
+
+[node name="Desk43" parent="YSort" index="32" instance=ExtResource( 3 )]
+
+position = Vector2( 129, 461 )
+
+[node name="Desk44" parent="YSort" index="33" instance=ExtResource( 3 )]
+
+position = Vector2( 129, 333 )
+
+[node name="Desk45" parent="YSort" index="34" instance=ExtResource( 3 )]
+
+position = Vector2( 129, 269 )
+
+[node name="MainCharacter" parent="YSort" index="35" instance=ExtResource( 4 )]
+
+position = Vector2( 980.015, 397.494 )
+
+[node name="Spawner" parent="YSort" index="36" instance=ExtResource( 5 )]
+
+position = Vector2( 1217, 397 )
+
+[node name="Storage" parent="YSort" index="37" instance=ExtResource( 6 )]
+
+position = Vector2( 1217, 525 )
+
+[node name="Balance" parent="YSort" index="38" instance=ExtResource( 7 )]
+
+position = Vector2( 449, 205 )
+
+[node name="Balance2" parent="YSort" index="39" instance=ExtResource( 7 )]
+
+position = Vector2( 705, 205 )
+
+[node name="Balance3" parent="YSort" index="40" instance=ExtResource( 7 )]
+
+position = Vector2( 705, 717 )
+
+[node name="Balance4" parent="YSort" index="41" instance=ExtResource( 7 )]
+
+position = Vector2( 449, 717 )
+
+[node name="Filter" parent="YSort" index="42" instance=ExtResource( 8 )]
+
+position = Vector2( 577, 205 )
+
+[node name="Filter2" parent="YSort" index="43" instance=ExtResource( 8 )]
+
+position = Vector2( 833, 205 )
+
+[node name="Filter3" parent="YSort" index="44" instance=ExtResource( 8 )]
+
+position = Vector2( 833, 717 )
+
+[node name="Filter4" parent="YSort" index="45" instance=ExtResource( 8 )]
+
+position = Vector2( 577, 717 )
+
+[node name="Checker" parent="YSort" index="46" instance=ExtResource( 9 )]
+
+position = Vector2( 129, 397 )
+scale = Vector2( -1, 1 )
+
+[node name="Checker2" parent="YSort" index="47" instance=ExtResource( 9 )]
+
+position = Vector2( 129, 525 )
+scale = Vector2( -1, 1 )
+
+[node name="CoatStore" parent="YSort" index="48" instance=ExtResource( 10 )]
+
+position = Vector2( 1025, 205 )
+
+[node name="GloveStore" parent="YSort" index="49" instance=ExtResource( 11 )]
+
+position = Vector2( 1089, 205 )
+
+[node name="MaskStore" parent="YSort" index="50" instance=ExtResource( 12 )]
+
+position = Vector2( 1153, 205 )
+
+[node name="HUD" parent="." index="2" instance=ExtResource( 13 )]
+
+margin_top = -8.0
+margin_bottom = 32.0
+
+[node name="SpawnTimer" type="Timer" parent="." index="3"]
+
+process_mode = 1
+wait_time = 5.0
+one_shot = false
+autostart = false
+
+[node name="StageTimer" type="Timer" parent="." index="4"]
+
+process_mode = 1
+wait_time = 300.0
+one_shot = true
+autostart = false
+
+[node name="Fade" type="Node2D" parent="." index="5"]
+
+editor/display_folded = true
+light_mask = 4
+z_index = 3
+_sections_unfolded = [ "Visibility", "Z Index" ]
+
+[node name="Fade" type="ColorRect" parent="Fade" index="0"]
+
+light_mask = 4
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1376.0
+margin_bottom = 778.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0, 0, 0, 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Fade" index="1"]
+
+root_node = NodePath("..")
+autoplay = "FadeIn"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/FadeIn = ExtResource( 14 )
+anims/FadeOut = SubResource( 1 )
+blend_times = [  ]
+
+[node name="Loading" parent="Fade" index="2" instance=ExtResource( 15 )]
+
+[node name="FlowTimer" type="Timer" parent="." index="6"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
+
+

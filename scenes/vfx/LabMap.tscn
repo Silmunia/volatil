@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/graphics/tiles/Tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://assets/graphics/tiles/Shelf.png" type="Texture" id=2]
+
+[node name="LabMap" type="TileMap" index="0"]
+
+editor/display_folded = true
+light_mask = 4
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 64, 64 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 0, 4, 0, 1, 4, 0, 2, 4, 0, 3, 4, 0, 4, 4, 0, 5, 4, 0, 6, 4, 0, 7, 4, 0, 8, 4, 0, 9, 4, 0, 10, 4, 0, 11, 4, 0, 12, 4, 0, 13, 4, 0, 14, 4, 0, 15, 4, 0, 16, 4, 0, 17, 4, 0, 18, 4, 0, 19, 4, 0, 20, 4, 0, 21, 4, 0, 131072, 0, 0, 131075, 1, 0, 131078, 0, 0, 131081, 1, 0, 131084, 0, 0, 131087, 1, 0, 131090, 0, 0, 131093, 1, 0, 327680, 2, 0, 327683, 3, 0, 327686, 2, 0, 327689, 3, 0, 327692, 2, 0, 327695, 3, 0, 327698, 2, 0, 327701, 3, 0, 524288, 0, 0, 524291, 1, 0, 524294, 0, 0, 524297, 1, 0, 524300, 0, 0, 524303, 1, 0, 524306, 0, 0, 524309, 1, 0, 720896, 2, 0, 720899, 3, 0, 720902, 2, 0, 720905, 3, 0, 720908, 2, 0, 720911, 3, 0, 720914, 2, 0, 720917, 3, 0 )
+_sections_unfolded = [ "Visibility" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Wall" type="TextureRect" parent="." index="0"]
+
+self_modulate = Color( 0.945313, 0.945313, 0.945313, 1 )
+light_mask = 4
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1365.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 0
+_sections_unfolded = [ "Visibility" ]
+
+

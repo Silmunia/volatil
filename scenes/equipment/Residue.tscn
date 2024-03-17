@@ -1,0 +1,203 @@
+[gd_scene load_steps=31 format=2]
+
+[ext_resource path="res://scripts/equipment/Residue.gd" type="Script" id=1]
+[ext_resource path="res://assets/graphics/sprites/residue/Mercurio/Filtrado.png" type="Texture" id=2]
+[ext_resource path="res://assets/graphics/sprites/residue/Cadmio/CadmioAgitado/Cadmio-Agitado1.png" type="Texture" id=3]
+[ext_resource path="res://assets/graphics/sprites/residue/Cadmio/CadmioAgitado/Cadmio-Agitado2.png" type="Texture" id=4]
+[ext_resource path="res://assets/graphics/sprites/residue/Cadmio/CadmioAgitado/Cadmio-Agitado3.png" type="Texture" id=5]
+[ext_resource path="res://assets/graphics/sprites/residue/Cadmio/CadmioAgitado/Cadmio-Agitado4.png" type="Texture" id=6]
+[ext_resource path="res://assets/graphics/sprites/residue/Agua/Normal.png" type="Texture" id=7]
+[ext_resource path="res://assets/graphics/sprites/residue/Cobre/Filtrado.png" type="Texture" id=8]
+[ext_resource path="res://assets/graphics/sprites/residue/Niquel/Verificado.png" type="Texture" id=9]
+[ext_resource path="res://assets/graphics/sprites/residue/Cadmio/CadmioAquecido/Cadmio-Aquecido1.png" type="Texture" id=10]
+[ext_resource path="res://assets/graphics/sprites/residue/Cadmio/CadmioAquecido/Cadmio-Aquecido2.png" type="Texture" id=11]
+[ext_resource path="res://assets/graphics/sprites/residue/Cadmio/CadmioAquecido/Cadmio-Aquecido3.png" type="Texture" id=12]
+[ext_resource path="res://assets/graphics/sprites/residue/Cadmio/CadmioAquecido/Cadmio-Aquecido4.png" type="Texture" id=13]
+[ext_resource path="res://assets/graphics/sprites/residue/Mercurio/Verificado.png" type="Texture" id=14]
+[ext_resource path="res://assets/graphics/sprites/residue/Mercurio/RepousadoAlt.png" type="Texture" id=15]
+[ext_resource path="res://assets/graphics/sprites/residue/Niquel/Normal.png" type="Texture" id=16]
+[ext_resource path="res://assets/graphics/sprites/residue/Niquel/PHAlt.png" type="Texture" id=17]
+[ext_resource path="res://assets/graphics/sprites/residue/Cadmio/PHAlt.png" type="Texture" id=18]
+[ext_resource path="res://assets/graphics/sprites/residue/Cadmio/Verificado.png" type="Texture" id=19]
+[ext_resource path="res://assets/graphics/sprites/residue/Mercurio/PHAlt.png" type="Texture" id=20]
+[ext_resource path="res://assets/graphics/sprites/residue/Cobre/Normal.png" type="Texture" id=21]
+[ext_resource path="res://assets/graphics/sprites/residue/Niquel/Filtrado.png" type="Texture" id=22]
+[ext_resource path="res://assets/graphics/sprites/residue/Mercurio/Normal.png" type="Texture" id=23]
+[ext_resource path="res://assets/graphics/sprites/residue/Cobre/PHAlt.png" type="Texture" id=24]
+[ext_resource path="res://assets/graphics/sprites/residue/Agua/Filtrado.png" type="Texture" id=25]
+[ext_resource path="res://assets/graphics/sprites/residue/Cadmio/Inicial.png" type="Texture" id=26]
+[ext_resource path="res://assets/graphics/sprites/residue/Cadmio/Filtrado.png" type="Texture" id=27]
+[ext_resource path="res://assets/graphics/sprites/vfx/light.png" type="Texture" id=28]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "Mercúrio3",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "Cádmio1",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "Água0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "Cobre2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "Níquel2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "Cádmio3",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "Mercúrio4",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ) ],
+"loop": true,
+"name": "Mercúrio2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 16 ) ],
+"loop": true,
+"name": "Níquel0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ) ],
+"loop": true,
+"name": "Níquel1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 18 ) ],
+"loop": true,
+"name": "Cádmio2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 19 ) ],
+"loop": true,
+"name": "Cádmio5",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 20 ) ],
+"loop": true,
+"name": "Mercúrio1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 21 ) ],
+"loop": true,
+"name": "Cobre0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 22 ) ],
+"loop": true,
+"name": "Níquel3",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 23 ) ],
+"loop": true,
+"name": "Mercúrio0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 24 ) ],
+"loop": true,
+"name": "Cobre1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 25 ) ],
+"loop": true,
+"name": "Água1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 26 ) ],
+"loop": true,
+"name": "Cádmio0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 27 ) ],
+"loop": true,
+"name": "Cádmio4",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 31.186, 32.7006 )
+
+[node name="Residue" type="Area2D" groups=[
+"Residue",
+]]
+
+light_mask = 2
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Visibility" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
+
+light_mask = 2
+position = Vector2( 0, -63 )
+scale = Vector2( 0.9, 0.9 )
+frames = SubResource( 1 )
+animation = "Níquel0"
+playing = true
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+visible = false
+position = Vector2( 0, -63 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Light2D" type="Light2D" parent="." index="2"]
+
+position = Vector2( 0, -46.5 )
+scale = Vector2( 0.241935, 0.125425 )
+enabled = false
+editor_only = false
+texture = ExtResource( 28 )
+offset = Vector2( 0, 0 )
+texture_scale = 1.0
+color = Color( 1, 1, 1, 1 )
+energy = 1.0
+mode = 0
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 2
+shadow_enabled = true
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 2
+_sections_unfolded = [ "Transform" ]
+
+

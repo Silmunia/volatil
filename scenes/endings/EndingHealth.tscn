@@ -1,0 +1,303 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://scripts/endings/EndingHealth.gd" type="Script" id=1]
+[ext_resource path="res://assets/sound/sfx/ChooseMenu.wav" type="AudioStream" id=2]
+[ext_resource path="res://assets/sound/sfx/SelectMenu.wav" type="AudioStream" id=3]
+[ext_resource path="res://assets/graphics/endings/Dano3.png" type="Texture" id=4]
+[ext_resource path="res://assets/fonts/Apparitions.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://assets/graphics/interface/labels/ShortLabel.png" type="Texture" id=6]
+[ext_resource path="res://assets/graphics/interface/labelSelectors/Select.png" type="Texture" id=7]
+[ext_resource path="res://assets/graphics/interface/labelSelectors/Hover.png" type="Texture" id=8]
+[ext_resource path="res://scenes/menus/Loading.tscn" type="PackedScene" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 150
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 5 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="Theme" id=2]
+
+default_font = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+
+size = 70
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 5 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="Theme" id=4]
+
+default_font = SubResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+
+size = 60
+use_mipmaps = false
+use_filter = true
+extra_spacing_bottom = 50
+font_data = ExtResource( 5 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+
+[sub_resource type="Theme" id=6]
+
+default_font = SubResource( 5 )
+
+[sub_resource type="SpriteFrames" id=7]
+
+animations = [ {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "Select",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "None",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "Hover",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=8]
+
+resource_name = "FadeIn"
+length = 0.2
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Fade:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+
+resource_name = "FadeOut"
+length = 0.2
+loop = false
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Fade:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.15 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Loading:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.15 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[node name="EndingHealth" type="Node" index="0"]
+
+script = ExtResource( 1 )
+hoverMenu = ExtResource( 2 )
+selectMenu = ExtResource( 3 )
+
+[node name="Background" type="TextureRect" parent="." index="0"]
+
+self_modulate = Color( 0.316406, 0.316406, 0.316406, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1370.0
+margin_bottom = 771.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 0
+_sections_unfolded = [ "Visibility" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Title" type="Label" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 6.0
+margin_top = 170.0
+margin_right = 1359.0
+margin_bottom = 326.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = SubResource( 2 )
+text = "Hospitalizado"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme" ]
+
+[node name="Desc" type="Label" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 3.0
+margin_top = 342.0
+margin_right = 1361.0
+margin_bottom = 416.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = SubResource( 4 )
+text = "Laboratórios são um perigo para os desatentos"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme" ]
+
+[node name="Options" type="TextureRect" parent="." index="3"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 488.0
+margin_top = 468.0
+margin_right = 857.0
+margin_bottom = 724.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="Options" index="0"]
+
+self_modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 25.0
+margin_top = 33.0
+margin_right = 341.0
+margin_bottom = 264.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = SubResource( 6 )
+text = "Tentar novamente
+Escolher outra fase"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme", "Visibility" ]
+
+[node name="Retry" type="AnimatedSprite" parent="." index="4"]
+
+position = Vector2( 668.023, 537.168 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 7 )
+animation = "None"
+_sections_unfolded = [ "Transform" ]
+
+[node name="Return" type="AnimatedSprite" parent="." index="5"]
+
+position = Vector2( 661.705, 649.98 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 7 )
+animation = "None"
+_sections_unfolded = [ "Transform" ]
+
+[node name="Fade" type="ColorRect" parent="." index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1375.0
+margin_bottom = 780.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0, 0, 0, 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="FadeAnimation" type="AnimationPlayer" parent="." index="7"]
+
+root_node = NodePath("..")
+autoplay = "FadeIn"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/FadeIn = SubResource( 8 )
+anims/FadeOut = SubResource( 9 )
+blend_times = [  ]
+
+[node name="Loading" parent="." index="8" instance=ExtResource( 9 )]
+
+visible = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="9"]
+
+stream = null
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "SFX"
+
+
